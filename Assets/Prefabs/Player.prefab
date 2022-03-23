@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d3c3e70d8490e4894f2b61bd1a4159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveDuration: 0.5
+  MoveDuration: 0.25
   SpriteController: {fileID: 7448774082763678385}
 --- !u!114 &7448774082763678385
 MonoBehaviour:

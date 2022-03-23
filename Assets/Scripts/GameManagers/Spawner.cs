@@ -16,6 +16,6 @@ public class Spawner : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        Instantiate(PlayerPrefab, Grid.CellToWorldPos(PlayerSpawnpointCell), Quaternion.identity);
+        Instantiate(PlayerPrefab, GameManager.Instance.Grid.CellToWorldPos(PlayerSpawnpointCell), Quaternion.identity);
     }
 }
