@@ -23,8 +23,19 @@ public class SpriteController : MonoBehaviour
 
     private void Start()
     {
+        InitStates();
+        InitOrder();
+    }
+
+    private void InitStates()
+    {
         chrState = State.Clear;
         lookDir = LookDir.Right;
+    }
+
+    private void InitOrder()
+    {
+        SpriteRenderer.sortingOrder = GameManager.Instance.Grid.WorldToCellPos(transform.position).x;
     }
 
     public void LookTo(LookDir dir)
@@ -65,6 +76,31 @@ public class SpriteController : MonoBehaviour
     {
         chrState = state;
         LookTo(lookDir);
+    }
+
+    public void SetOrderInLayer(int value)
+    {
+        SpriteRenderer.sortingOrder = value;
+    }
+
+    public void AddOrderInLayer()
+    {
+        SpriteRenderer.sortingOrder++;
+    }
+
+    public void SubOrderInLayer()
+    {
+        SpriteRenderer.sortingOrder--;
+    }
+
+    public void IncreaseOrderInLayer()
+    {
+        SpriteRenderer.sortingOrder++;
+    }
+
+    public void Decrease9OrderInLayer()
+    {
+        SpriteRenderer.sortingOrder--;
     }
 }
 

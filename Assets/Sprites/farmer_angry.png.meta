@@ -130,12 +130,12 @@ TextureImporter:
       name: farmer_angry_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 848
-        width: 809.5
-        height: 848
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 36
+        y: 874
+        width: 739
+        height: 763
+      alignment: 9
+      pivot: {x: 0.25, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: farmer_angry_1
       rect:
         serializedVersion: 2
-        x: 809
-        y: 848
-        width: 809.5
-        height: 848
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 814
+        y: 867
+        width: 767
+        height: 764
+      alignment: 9
+      pivot: {x: 0.75, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: farmer_angry_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 809.5
-        height: 848
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 97
+        y: 43
+        width: 372
+        height: 784
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: farmer_angry_3
       rect:
         serializedVersion: 2
-        x: 809
-        y: 0
-        width: 809.5
-        height: 848
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1188
+        y: 41
+        width: 359
+        height: 783
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

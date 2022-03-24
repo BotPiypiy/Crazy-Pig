@@ -3,15 +3,15 @@ using UnityEngine;
 public class Grid : MonoBehaviour
 {
     [SerializeField]
-    private int Columns;        //count of columns at map
+    public int Columns;        //count of columns at map
     [SerializeField]
-    private int Lines;          //count of lines at map
+    public int Lines;          //count of lines at map
     [SerializeField]
-    private float OffsetX;
+    private float OffsetX;      //offset of first cell from X zero
     [SerializeField]
-    private float OffsetY;
+    private float OffsetY;      //ofsset of first cell from Y zero
     [SerializeField]
-    private Vector2 CellSize;   //cell size
+    public Vector2 CellSize;   //cell size
     [SerializeField]
     private float DeltaX;       //X-axis difference between cells in the same column
 
@@ -45,6 +45,7 @@ public class Grid : MonoBehaviour
             {
                 GameObject stone = Instantiate(StonePrefab, CellToWorldPos(i, j), Quaternion.identity);
                 Map[i, j] = stone;
+                stone.GetComponent<SpriteRenderer>().sortingOrder = i;
             }
         }
     }
@@ -83,7 +84,7 @@ public class Grid : MonoBehaviour
     {
         if (line < Lines && column < Columns && line > -1 && column > -1)
         {
-            if (Map[line, column] == null)
+            if (Map[line, column] == null || !Map[line, column].name.Contains("stone"))
             {
                 return true;
             }
@@ -96,10 +97,30 @@ public class Grid : MonoBehaviour
     {
         if (cell.x < Lines && cell.y < Columns && cell.x > -1 && cell.y > -1)
         {
-            if (Map[cell.x, cell.y] == null)
+            if (Map[cell.x, cell.y] == null || !Map[cell.x, cell.y].name.Contains("stone"))
             {
                 return true;
             }
+        }
+
+        return false;
+    }
+
+    public void SetCellObject(GameObject thing, Vector2Int cell)
+    {
+        Map[cell.x, cell.y] = thing;
+    }
+
+    public GameObject GetCellObject(Vector2Int cell)
+    {
+        return Map[cell.x, cell.y];
+    }
+
+    public bool CheckBounds(Vector2Int cell)
+    {
+        if (cell.x > -1 && cell.y > -1 && cell.x < Lines && cell.y < Columns)
+        {
+            return true;
         }
 
         return false;
